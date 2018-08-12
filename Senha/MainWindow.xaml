@@ -5,9 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Senha"
         mc:Ignorable="d"
-        Title="Senhas Conexão TS" Height="576.159" Width="885.431" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Background="#FF94DBF5" Loaded="WinPrincipal_Loaded" Icon="icons8-senha-100.ico">
+        Title="Senhas Conexão TS" Height="576.159" Width="885.431" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Loaded="WinPrincipal_Loaded" Icon="icons8-senha-100.ico">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="White" Offset="0"/>
+            <GradientStop Color="#FF1A6783" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
     <Grid x:Name="GrdPrincipal">
-        <Grid x:Name="GrdInsercao" Margin="0,0,0,357">
+        <Grid x:Name="GrdInsercao" Margin="0,0,0,357" ShowGridLines="True">
             <Label x:Name="LblEmpresa" Content="Empresa" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
             <TextBox x:Name="TxtEmpresa" HorizontalAlignment="Left" Height="23" Margin="10,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="491" TabIndex="1" MaxLines="150"/>
             <Label x:Name="LblDominio" Content="Domínio" HorizontalAlignment="Left" Margin="10,57,0,0" VerticalAlignment="Top"/>
