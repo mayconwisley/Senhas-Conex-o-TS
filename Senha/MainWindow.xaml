@@ -1,0 +1,47 @@
+﻿<Window x:Name="WinPrincipal" x:Class="Senha.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Senha"
+        mc:Ignorable="d"
+        Title="Senhas Conexão TS" Height="576.159" Width="885.431" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Background="#FF94DBF5" Loaded="WinPrincipal_Loaded" Icon="icons8-senha-100.ico">
+    <Grid x:Name="GrdPrincipal">
+        <Grid x:Name="GrdInsercao" Margin="0,0,0,357">
+            <Label x:Name="LblEmpresa" Content="Empresa" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="TxtEmpresa" HorizontalAlignment="Left" Height="23" Margin="10,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="491" TabIndex="1" MaxLines="150"/>
+            <Label x:Name="LblDominio" Content="Domínio" HorizontalAlignment="Left" Margin="10,57,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="TxtDominio" HorizontalAlignment="Left" Height="23" Margin="10,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" TabIndex="2" MaxLines="150"/>
+            <TextBox x:Name="TxtUsuario" HorizontalAlignment="Left" Height="23" Margin="182,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" TabIndex="3" MaxLines="150"/>
+            <Label x:Name="LblUsuario" Content="Usuário" HorizontalAlignment="Left" Margin="182,57,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="TxtSenha" HorizontalAlignment="Left" Height="23" Margin="352,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" TabIndex="4" MaxLines="150"/>
+            <Label x:Name="LblSenha" Content="Senha" HorizontalAlignment="Left" Margin="352,57,0,0" VerticalAlignment="Top"/>
+            <Button x:Name="BtnGravar" Content="Gravar" Margin="601,36,192,0" VerticalAlignment="Top" Height="23" Background="#FF00BBD8" TabIndex="6" Click="BtnGravar_Click"/>
+            <Button x:Name="BtnAlterar" Content="Alterar" HorizontalAlignment="Left" Margin="692,36,0,0" VerticalAlignment="Top" Width="86" Height="23" IsEnabled="False" Background="#FF00BBD8" TabIndex="7" Click="BtnAlterar_Click"/>
+            <Button x:Name="BtnExcluir" Content="Excluir" Margin="783,36,10,0" VerticalAlignment="Top" Height="23" IsEnabled="False" Background="#FF00BBD8" TabIndex="8" Click="BtnExcluir_Click"/>
+            <Label x:Name="LblDescricao" Content="Descrição" HorizontalAlignment="Left" Margin="10,116,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.452,-0.296"/>
+            <TextBox x:Name="TxtDescricao" Height="33" Margin="10,147,10,0" TextWrapping="Wrap" VerticalAlignment="Top" TabIndex="5" ScrollViewer.CanContentScroll="True" VerticalScrollBarVisibility="Auto" MaxLines="500"/>
+
+        </Grid>
+        <Grid x:Name="GrdPesquisa" Margin="0,195,0,288">
+            <Label x:Name="LblPesquisa" Content="Pesquisar" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="TxtPesquisa" Height="23" Margin="10,31,10,0" TextWrapping="Wrap" VerticalAlignment="Top" TabIndex="9" TextChanged="TxtPesquisa_TextChanged"/>
+        </Grid>
+        <Grid x:Name="GrdResultado" Margin="0,274,0,0">
+            <DataGrid x:Name="DGrdResultado" Margin="10,0,10,10" TabIndex="10" BorderBrush="#FF96D4E6" IsReadOnly="True" ItemsSource="{Binding}" AutoGenerateColumns="False" MouseDoubleClick="DGrdResultado_MouseDoubleClick" Foreground="Black" VerticalGridLinesBrush="#FF1595EE" HorizontalGridLinesBrush="#FF1595EE" >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Id" Binding="{Binding Id}" Visibility="Hidden"/>
+                    <DataGridTextColumn Header="Empresa" Binding="{Binding Empresa_Usuario}" Width="150"/>
+                    <DataGridTextColumn Binding="{Binding Nome_Usuario}" Header="Usuário" Width="150"/>
+                    <DataGridTextColumn Header="Senha" Binding="{Binding Senha_Usuario}" Width="100"/>
+                    <DataGridTextColumn Binding="{Binding Dominio_Usuario}" Header="Domínio" Width="100"/>
+                    <DataGridTextColumn Header="Descrição" Binding="{Binding Descricao}" Width="355"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
+
+
+
+        </Grid>
+    </Grid>
+</Window>
