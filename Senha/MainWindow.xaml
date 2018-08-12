@@ -23,7 +23,7 @@
             <TextBox x:Name="TxtSenha" HorizontalAlignment="Left" Height="23" Margin="352,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" TabIndex="4" MaxLines="150"/>
             <Label x:Name="LblSenha" Content="Senha" HorizontalAlignment="Left" Margin="352,57,0,0" VerticalAlignment="Top"/>
             <Button x:Name="BtnGravar" Content="Gravar" Margin="601,36,192,0" VerticalAlignment="Top" Height="23" Background="#FF00BBD8" TabIndex="6" Click="BtnGravar_Click"/>
-            <Button x:Name="BtnAlterar" Content="Alterar" HorizontalAlignment="Left" Margin="692,36,0,0" VerticalAlignment="Top" Width="86" Height="23" IsEnabled="False" Background="#FF00BBD8" TabIndex="7" Click="BtnAlterar_Click"/>
+            <Button x:Name="BtnAlterar" Content="Alterar" Margin="692,36,101,0" VerticalAlignment="Top" Height="23" IsEnabled="False" Background="#FF00BBD8" TabIndex="7" Click="BtnAlterar_Click"/>
             <Button x:Name="BtnExcluir" Content="Excluir" Margin="783,36,10,0" VerticalAlignment="Top" Height="23" IsEnabled="False" Background="#FF00BBD8" TabIndex="8" Click="BtnExcluir_Click"/>
             <Label x:Name="LblDescricao" Content="Descrição" HorizontalAlignment="Left" Margin="10,116,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.452,-0.296"/>
             <TextBox x:Name="TxtDescricao" Height="33" Margin="10,147,10,0" TextWrapping="Wrap" VerticalAlignment="Top" TabIndex="5" ScrollViewer.CanContentScroll="True" VerticalScrollBarVisibility="Auto" MaxLines="500"/>
